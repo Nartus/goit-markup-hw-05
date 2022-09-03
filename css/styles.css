@@ -170,10 +170,12 @@ img {
 }
 
 .studio {
+  position: relative;
   color: var(--text);
 }
 
 .portfolio {
+  position: relative;
   color: var(--text);
 }
 
@@ -204,6 +206,10 @@ img {
 .phone:hover,
 .phone:focus {
   color: var(--logo-one);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .phone {
@@ -246,6 +252,10 @@ img {
   padding: 10px 22px;
   border: none;
   background-color: var(--logo-one);
+
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover {
   color: var(--text-white);
@@ -324,6 +334,32 @@ img {
   padding-right: 0;
 }
 
+.img-position {
+  position: relative;
+}
+
+.img-background {
+  position: absolute;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.img-text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-white);
+}
+
 /*заголовки "чем занимаемся" и "наша команда" */
 .headlines-two {
   font-weight: 700;
@@ -399,6 +435,27 @@ img {
   height: 44px;
 }
 
+.icon-hover-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  fill: currentColor;
+  color: var(--icon-svg);
+}
+
+.icon-hover-one:hover,
+.icon-hover-one:focus {
+  color: var(--text-white);
+  background-color: var(--logo-one);
+
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .icon-hover {
   display: flex;
   justify-content: center;
@@ -407,14 +464,18 @@ img {
   height: 100%;
   border-radius: 50%;
   fill: currentColor;
-  background: rgba(255, 255, 255, 0.1);
   color: var(--text-white);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .icon-hover:hover,
 .icon-hover:focus {
   color: var(--text-white);
   background-color: var(--logo-one);
+
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-flex {
@@ -446,6 +507,10 @@ img {
   border-radius: 4px;
   color: var(--icon-svg);
   fill: currentColor;
+
+  transition-property: color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-hover:hover,
@@ -508,6 +573,10 @@ img {
 .phone-two:hover,
 .phone-two:focus {
   color: var(--logo-one);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address,
@@ -604,10 +673,65 @@ img {
   color: var(--logo-one);
 }
 
+.current::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  top: 76px;
+  background: var(--logo-one);
+  border-radius: 2px;
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+}
+
+.test {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-background-portfolio {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+
+.img-text-portfolio {
+  position: absolute;
+  padding: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--text-white);
+  opacity: 0;
+}
+
+.img-background-portfolio:hover,
+.img-text-portfolio:hover {
+  opacity: 1;
+  animation: animate45 250ms;
+}
+
+@keyframes animate45 {
+  0% {
+    transform: translateY(100%);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .shadow-cards:hover,
