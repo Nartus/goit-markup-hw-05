@@ -721,6 +721,7 @@ img {
 
 .test {
   position: relative;
+  overflow: hidden;
 }
 
 .shadow-cards:hover,
