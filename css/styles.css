@@ -716,8 +716,8 @@ img {
   color: var(--text-white);
 }
 
-.shadow-cards:hover.background-portfolio,
-.shadow-cards:focus.background-portfolio {
+.shadow-cards:hover .background-portfolio,
+.shadow-cards:focus .background-portfolio {
   transform: translateY(0);
 }
 
@@ -727,7 +727,7 @@ img {
 }
 
 .shadow-cards:hover,
-.cards-hover:focus {
+.shadow-cards:focus {
   display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -739,3 +739,29 @@ img {
   border-bottom: 1px solid #eeeeee;
   padding: 20px 24px;
 }
+
+/* 
+Модальное окно */
+/* .backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1600px;
+  height: 1024px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  left: 536px;
+  top: 221px;
+  background: var(--text-white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+} */
