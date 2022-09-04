@@ -716,13 +716,14 @@ img {
   color: var(--text-white);
 }
 
-.shadow-cards:hover.background-portfolio {
+.shadow-cards:hover.background-portfolio,
+.shadow-cards:focus.background-portfolio {
   transform: translateY(0);
 }
 
 .test {
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .shadow-cards:hover,
