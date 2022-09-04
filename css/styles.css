@@ -726,6 +726,9 @@ img {
   overflow: hidden;
 }
 
+.shadow-cards {
+}
+
 .shadow-cards:hover,
 .shadow-cards:focus {
   display: block;
