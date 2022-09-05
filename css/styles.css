@@ -448,7 +448,8 @@ img {
   border-radius: 50%;
   fill: currentColor;
   color: var(--icon-svg);
-  /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-hover-one:hover,
@@ -468,13 +469,11 @@ img {
   color: var(--text-white);
   background: rgba(255, 255, 255, 0.1);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-hover:hover,
 .icon-hover:focus {
-  color: var(--text-white);
   background-color: var(--logo-one);
 }
 
@@ -508,7 +507,7 @@ img {
   color: var(--icon-svg);
   fill: currentColor;
 
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -722,7 +721,7 @@ img {
 
 .shadow-cards {
   display: block;
-  transition: box-shadow 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .shadow-cards:hover,
